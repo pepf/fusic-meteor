@@ -22,6 +22,7 @@ Router.waitOn(function() {
 
 Router.map(function() {
   this.route('home', {path: '/'});
+  this.route('votelist'); //dummy layout for vote-mode
   this.route('loading'); //<Testing purposes only
   this.route('notfound'); //<Testing purposes only
 

@@ -1,0 +1,55 @@
+<!-- Container div -->
+<template name="votelist">
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+    {{>searchBox}}
+    {{# each songs }}
+      {{> votesong}}
+    {{/each}}
+    </div>
+    <div class="col-md-4">
+      <h2>{{title}}</h2>
+    </div>
+  </div>
+</template>
+
+
+<!--Draggable, +1 button, cover art -->
+<template name="votesong">
+  <div class="row votesong">
+    <div class="col-md-1">
+      <div class="artwork"><span class="glyphicon glyphicon-play"></span></div>
+    </div>
+    <div class="col-sm-9">
+      <div class="pull-right">
+        {{#with voters}}
+          {{>circleAvatar}}
+        {{/with}}
+      </div>
+      <h3 class="songtitle">Song name</h3>
+      <small>Added by pietje en henk</small>
+    </div>
+    <div class="col-sm-2">
+      <div class="btn-group btn-group-md pull-right">
+        <button type="button" class="btn btn-primary voteBtn">
+          <span class="glyphicon glyphicon-arrow-up"></span>
+        </button>
+        <button type="button" class="btn btn-default disabled">{{votes}}</button>
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<template name="searchBox">
+  <div class="row searchbox">
+    <div class="col-sm-12">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-search"></span>
+        </span>
+        <input type="text" class="form-control" placeholder="Search for a song to add">
+      </div>
+    </div>
+  </div>
+</template>

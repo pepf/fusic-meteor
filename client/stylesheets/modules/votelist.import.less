@@ -1,0 +1,50 @@
+.searchbox {
+  margin:1em 0;
+}
+.votesong {
+  padding:5px 0;
+  border-bottom: 1px solid lightgray;
+  .artwork {
+    display: block;
+    position:relative;
+    overflow:hidden;
+    width: 45px;
+    height: 45px;
+    background-color: lightcoral;
+    border-radius:2px;
+    color:white;
+    .transition();
+    span.glyphicon {
+      position:relative;
+      top:-100%;
+      left:35%;
+      .transition();
+    }
+  }
+  .artwork.playing {
+    background-color: darken(lightcoral,10%);
+    span { top:35%; }
+  }
+
+  .songtitle {
+    margin:0px;
+    font-size:18px;
+  }
+
+  .voteBtn {
+    overflow:hidden;
+    .transition();
+    span{
+      position:relative;
+      .transition();
+    }
+  }
+  .voteBtn.voted {
+    background-color:white;
+    color:@brand-success;
+    border-color:@gray-lighter;
+    span{
+      top:-35px;
+    }
+  }
+}
